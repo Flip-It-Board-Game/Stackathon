@@ -15,25 +15,35 @@ class Buttons extends Component {
   }
 
   toggleColor() {
+    //nested for loops, cross color change, light blue or blue
+    // four by four cells
+    //when clicked
     const iNum = this.props.iNum
-    let tempArr = this.props.bool.slice(0)
+    let tempArr = this.props.bool.slice()
     tempArr.splice(iNum, 1, !this.props.bool[iNum])
+    console.log('iNum', iNum)
+
     if (iNum - 1 >= 0 && iNum % width !== 0) {
       let oneBeforeNum = iNum - 1
       tempArr.splice(oneBeforeNum, 1, !this.props.bool[oneBeforeNum])
+      console.log('iNum - 1 >= 0 && iNum % width !== 0', iNum)
     }
     if (iNum + 1 !== width && (iNum + 1) % width !== 0) {
       let oneAfterNum = iNum + 1
       tempArr.splice(oneAfterNum, 1, !this.props.bool[oneAfterNum])
+      console.log('iNum + 1 !== width && (iNum + 1) % width !== 0', iNum)
     }
     if (iNum < totalSquares) {
       let widthLessNum = iNum - width
       tempArr.splice(widthLessNum, 1, !this.props.bool[widthLessNum])
+      console.log('iNum < totalSquares', iNum)
     }
     if (iNum < totalSquares) {
       let widthPlusNum = iNum + width
       tempArr.splice(widthPlusNum, 1, !this.props.bool[widthPlusNum])
+      console.log('iNum < totalSquares', iNum)
     }
+    console.log('______________________________')
     this.props.newArray(tempArr)
   }
 
