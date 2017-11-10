@@ -14,8 +14,8 @@ class tableView extends Component {
   render() {
     //Renders table based on user input
     const userInput = 4
-    const width = 4
-    const height = 4
+    const width = 2
+    const height = 2
     let num = width * height
     let rowButtons = []
     let tableData = []

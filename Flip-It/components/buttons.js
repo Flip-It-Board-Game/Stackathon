@@ -4,9 +4,8 @@ import { Button } from 'native-base'
 import { connect } from 'react-redux'
 import { newArray } from './store/store'
 
-const userInput = 5
-const width = 4
-const height = 4
+const width = 2
+const height = 2
 const totalSquares = width * height
 
 class Buttons extends Component {

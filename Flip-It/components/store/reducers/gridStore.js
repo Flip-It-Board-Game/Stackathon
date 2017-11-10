@@ -1,6 +1,6 @@
 const userInput = 4
-const width = 4
-const height = 4
+const width = 2
+const height = 2
 const totalSquares = width * height
 
 let boolArray = []
