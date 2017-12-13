@@ -15,7 +15,7 @@ class Buttons extends Component {
   handleCanvas(canvas)  {
     const ctx = canvas.getContext('2d');
     ctx.fillStyle = 'purple';
-    ctx.fillRect(0, 0, 100, 100);
+    ctx.fillRect(0, 0, 50, 50);
   }
  
   toggleColor() {
@@ -75,7 +75,7 @@ class Buttons extends Component {
 
     return (
       <View>
-        <Canvas ref={this.handleCanvas}/>
+        {/* <Canvas ref={this.handleCanvas}/> */}
         <TouchableHighlight onPress={this.toggleColor}>
           {displayBool ? (
             <Image
