@@ -1,14 +1,24 @@
-import React, { Component } from 'react'
-import { Container, Header, Content, Button, Text } from 'native-base'
-import { StyleSheet, Image } from 'react-native'
-import { Col, Row, Grid } from 'react-native-easy-grid'
+import React, { Component } from 'react';
+import { Container, Header, Content, Button, Text } from 'native-base';
+import { StyleSheet, Image } from 'react-native';
+import { Col, Row, Grid } from 'react-native-easy-grid';
+
+
+
+let styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'white',
+    justifyContent: 'center'
+  }
+});
 
 export default class GameStats extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       userName: 'Bob'
-    }
+    };
   }
 
   render() {
@@ -52,14 +62,6 @@ export default class GameStats extends Component {
           </Button>
         </Content>
       </Container>
-    )
+    );
   }
 }
-
-let styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'white',
-    justifyContent: 'center'
-  }
-})

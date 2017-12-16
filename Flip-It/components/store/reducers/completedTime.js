@@ -1,23 +1,23 @@
-let initialState = 0
+let initialState = 0;
 
 //Actions
-const COMPLETED_TIME = 'COMPLETED_TIME'
+const COMPLETED_TIME = 'COMPLETED_TIME';
 
 //Action Creators
 export function completionTime(time) {
-  const action = { type: COMPLETED_TIME, time }
-  return action
+  const action = { type: COMPLETED_TIME, time };
+  return action;
 }
 
 //Reducer
 export default function reducer(state = initialState, action) {
-  newState = state
+  let newState = state;
   switch (action.type) {
     case COMPLETED_TIME:
-      newState = action.time
-      return newState
+      newState = action.time;
+      return newState;
 
     default:
-      return newState
+      return newState;
   }
 }

@@ -1,24 +1,20 @@
-import React, { Component } from 'react'
-import { View, StyleSheet, Text, Image } from 'react-native'
-import { Button } from 'native-base'
-import store, { setBoard, setDimensions } from '../components/store/store'
-const Dimensions = require('Dimensions')
-let { height, width } = Dimensions.get('window')
-let tHeight = height
-let tWidth = width
+import React, { Component } from 'react';
+import { View, StyleSheet, Text, Image } from 'react-native';
+import { Button } from 'native-base';
+import store, { setBoard, setDimensions } from '../components/store/store';
+const Dimensions = require('Dimensions');
+let { height, width } = Dimensions.get('window');
+let tHeight = height;
+let tWidth = width;
 
 class Menu extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     let styles = StyleSheet.create({
       container: {
         justifyContent: 'center'
       }
-    })
-    let buttonArr = []
+    });
+    let buttonArr = [];
     for (let i = 2; i < 8; i++) {
       buttonArr.push(
         <View>
@@ -27,9 +23,9 @@ class Menu extends Component {
             light
             style={{ backgroundColor: 'rgba(0,0,0,0)' }}
             onPress={() => {
-              store.dispatch(setBoard({ width: i, height: i }))
-              store.dispatch(setDimensions({ width: i, height: i }))
-              this.props.navigation.navigate('GameScreen')
+              store.dispatch(setBoard({ width: i, height: i }));
+              store.dispatch(setDimensions({ width: i, height: i }));
+              this.props.navigation.navigate('GameScreen');
             }}
           >
             <Text
@@ -54,9 +50,9 @@ class Menu extends Component {
               transparent
               light
               onPress={() => {
-                store.dispatch(setBoard({ width: i, height: i + 1 }))
-                store.dispatch(setDimensions({ width: i, height: i + 1 }))
-                this.props.navigation.navigate('GameScreen')
+                store.dispatch(setBoard({ width: i, height: i + 1 }));
+                store.dispatch(setDimensions({ width: i, height: i + 1 }));
+                this.props.navigation.navigate('GameScreen');
               }}
             >
               <Text
@@ -80,7 +76,7 @@ class Menu extends Component {
             <View />
           )}
         </View>
-      )
+      );
     }
     return (
       <View style={styles.container}>
@@ -100,15 +96,15 @@ class Menu extends Component {
               width: tWidth,
               height: tHeight
             }}
-            source={require('../images/snowgif.gif')}
+            source={require('../images/snowbackground.gif')}
           >
             {buttonArr.map(button => button)}
             <Text>{'\n'}</Text>
           </Image>
         </Image>
       </View>
-    )
+    );
   }
 }
 
-export default Menu
+export default Menu;

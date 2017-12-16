@@ -7,10 +7,36 @@ import { Container, Content } from 'native-base';
 import Canvas from 'react-native-canvas';
 
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#6b92b9'
+  },
+  background: {
+    opacity: 0.3,
+    // width: '100%',
+    // height: '100%',
+    zIndex: 1,
+    justifyContent: 'center',
+    flex: 1,
+  },
+  text: {
+    color: 'black',
+    opacity: 1,
+    zIndex: 1
+  },
+  renderA: {
+
+  },
+  renderB: {
+
+  }
+});
+
 export default class GameScreen extends Component {
   constructor(props) {
-    super(props)
-    this.handleCanvas = this.handleCanvas.bind(this)
+    super(props);
+    this.handleCanvas = this.handleCanvas.bind(this);
   }
 
 
@@ -40,32 +66,6 @@ export default class GameScreen extends Component {
           </Content>
         </Container>
       </Provider>
-    )
+    );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#6b92b9'
-  },
-  background: {
-    opacity: 0.3,
-    // width: '100%',
-    // height: '100%',
-    zIndex: 1,
-    justifyContent: 'center',
-    flex: 1,
-  },
-  text: {
-    color: 'black',
-    opacity: 1,
-    zIndex: 1
-  },
-  renderA:{
-
-  },
-  renderB:{
-    
-  }
-});

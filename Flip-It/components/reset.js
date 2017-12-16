@@ -1,17 +1,17 @@
-import React, { Component } from 'react'
-import { View, Text } from 'react-native'
-import { Button } from 'native-base'
-import { connect } from 'react-redux'
-import { reset, setBoard, setCount, setTime } from './store/store'
+import React, { Component } from 'react';
+import { View, Text } from 'react-native';
+import { Button } from 'native-base';
+import { connect } from 'react-redux';
+import { reset, setBoard, setCount, setTime } from './store/store';
 
 class Reset extends Component {
   constructor(props) {
-    super(props)
-    this.saveData = this.saveData.bind(this)
+    super(props);
+    this.saveData = this.saveData.bind(this);
   }
 
   saveData() {
-    let moves = this.props && this.props.count.count
+    let moves = this.props && this.props.count.count;
   }
 
   render() {
@@ -21,13 +21,13 @@ class Reset extends Component {
           transparent
           light
           onPress={() => {
-            this.props.setTime(Date.now())
+            this.props.setTime(Date.now());
             this.props.setBoard({
               width: this.props.dimensions.width,
               height: this.props.dimensions.height
-            })
-            this.props.setCount({ count: 0 })
-            this.saveData()
+            });
+            this.props.setCount({ count: 0 });
+            this.saveData();
           }}
         >
           <Text
@@ -44,7 +44,7 @@ class Reset extends Component {
           </Text>
         </Button>
       </View>
-    )
+    );
   }
 }
 
@@ -52,8 +52,8 @@ const mapState = state => {
   return {
     dimensions: state.dimensions,
     count: state.count
-  }
-}
+  };
+};
 
 const mapDispatch = dispatch => {
   return {
@@ -61,7 +61,7 @@ const mapDispatch = dispatch => {
     setBoard: board => dispatch(setBoard(board)),
     setCount: num => dispatch(setCount(num)),
     setTime: time => dispatch(setTime(time))
-  }
-}
+  };
+};
 
-export default connect(mapState, mapDispatch)(Reset)
+export default connect(mapState, mapDispatch)(Reset);

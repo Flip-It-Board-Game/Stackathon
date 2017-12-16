@@ -2,20 +2,6 @@ import React, {Component} from 'react';
 import {View, StyleSheet, Text, KeyboardAvoidingView} from 'react-native';
 import LoginForm from '../components/loginForm';
 
-export default class Login extends Component{
-    render(){
-        return (
-            <KeyboardAvoidingView behavior='padding' style={styles.container}>
-                <View style={styles.logoContainer}>
-                <Text style={styles.title}>Login!</Text>
-                </View>
-                <View style={styles.form}> 
-                    <LoginForm/>
-                </View>
-            </KeyboardAvoidingView>
-        );
-    }
-}
 
 const styles = StyleSheet.create({
     container: {
@@ -34,3 +20,18 @@ const styles = StyleSheet.create({
         opacity: 0.9
     }
 });
+
+export default class Login extends Component{
+    render(){
+        return (
+            <KeyboardAvoidingView behavior="padding" style={styles.container}>
+                <View style={styles.logoContainer}>
+                <Text style={styles.title}>Login!</Text>
+                </View>
+                <View style={styles.form}>
+                    <LoginForm />
+                </View>
+            </KeyboardAvoidingView>
+        );
+    }
+}

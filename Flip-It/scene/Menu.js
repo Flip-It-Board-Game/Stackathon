@@ -1,18 +1,13 @@
-import React, { Component } from 'react'
-import { View, StyleSheet, Image, Text } from 'react-native'
-import { Button } from 'native-base'
-import GameScreen from './GameScreen'
-import LevelSelector from './LevelSelector'
-const Dimensions = require('Dimensions')
-let { height, width } = Dimensions.get('window')
-let tHeight = height
-let tWidth = width
+import React, { Component } from 'react';
+import { View, StyleSheet, Image, Text } from 'react-native';
+import { Button } from 'native-base';
+
+const Dimensions = require('Dimensions');
+let { height, width } = Dimensions.get('window');
+let tHeight = height;
+let tWidth = width;
 
 class GameMenu extends Component {
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     return (
       <View>
@@ -26,17 +21,17 @@ class GameMenu extends Component {
             width: tWidth,
             height: tHeight
           }}
-          source={require('../images/snowman.jpg')}
+          source={require('../images/snowbackground.gif')}
         >
-          <Image
+          {/* <Image
             style={{
               justifyContent: 'center',
               alignItems: 'center',
               width: tWidth,
               height: tHeight
             }}
-            source={require('../images/snowgif.gif')}
-          >
+            source={require('../images/snowbackground.gif')}
+          > */}
             <View>
               <Button
                 transparent
@@ -161,10 +156,10 @@ class GameMenu extends Component {
               />
             </View>
           </Image>
-        </Image>
+        {/* </Image> */}
       </View>
-    )
+    );
   }
 }
 
-export default GameMenu
+export default GameMenu;

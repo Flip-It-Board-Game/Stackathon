@@ -158,14 +158,14 @@ export default class GameStats extends Component {
             width: tWidth,
             height: tHeight
           }}
-          source={require('../images/snowman.jpg')}
+          source={require('../images/snowbackground.gif')}
         >
           <Image
             style={{
               width: tWidth,
               height: tHeight
             }}
-            source={require('../images/snowgif.gif')}
+            source={require('../images/snowbackground.gif')}
           >
             {/* <Header>
               <Text>Profile</Text>

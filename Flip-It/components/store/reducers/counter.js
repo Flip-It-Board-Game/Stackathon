@@ -1,24 +1,24 @@
-let initialState = { count: 0 }
+let initialState = { count: 0 };
 
 //Actions
-const COUNTER = 'COUNTER'
+const COUNTER = 'COUNTER';
 
 //Action Creators
 export function setCount(num) {
-  const action = { type: COUNTER, num }
-  return action
+  const action = { type: COUNTER, num };
+  return action;
 }
 
 //Reducer
 export default function reducer(state = initialState, action) {
-  let newState = Object.assign({}, state)
+  let newState = Object.assign({}, state);
 
   switch (action.type) {
     case COUNTER:
-      newState = action.num
-      return newState
+      newState = action.num;
+      return newState;
 
     default:
-      return newState
+      return newState;
   }
 }

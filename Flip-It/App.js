@@ -26,6 +26,39 @@ let tHeight = height
 let tWidth = width
 console.disableYellowBox = true
 
+
+let styles = StyleSheet.create({
+  container: {
+    paddingLeft: 120,
+    paddingRight: 120
+  },
+  button: {
+    paddingBottom: 10,
+    paddingTop: 10,
+    backgroundColor: 'rgba(135,135,135,0.7)'
+  },
+  background: {
+    // position: 'absolute',
+    width: '100%',
+    height: '100%',
+    justifyContent: 'center',
+    flex: 1
+    // resizeMode: 'cover',
+    // backgroundImage: '50';
+    // alignItems: 'center',
+  },
+  image:{
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: tWidth,
+      height: tHeight
+  },
+  text: {
+    textAlign: 'center',
+    color: 'white',
+    fontWeight: '700'
+  }
+})
 class HomeScreen extends Component {
   constructor(props) {
     super(props)
@@ -46,18 +79,13 @@ class HomeScreen extends Component {
   render() {
     return (
       <Provider store={store}>
-        <ImageBackground
+        {/* <ImageBackground
           style={styles.image}
           source={require('./images/snowman.jpg')}
-        >
+        > */}
           <Image
-            style={{
-              justifyContent: 'center',
-              alignItems: 'center',
-              width: tWidth,
-              height: tHeight
-            }}
-            source={require('./images/snowgif.gif')}
+            style={styles.image}
+            source={require('./images/snowbackground.gif')}
           >
             <View style={styles.container}>
               <View style={styles.button}>
@@ -72,7 +100,7 @@ class HomeScreen extends Component {
               </View>
             </View>
           </Image>
-        </ImageBackground>
+        {/* </ImageBackground> */}
       </Provider>
     )
   }
@@ -105,31 +133,5 @@ const ModalStack = StackNavigator({
   }
 })
 
-let styles = StyleSheet.create({
-  container: {
-    paddingLeft: 120,
-    paddingRight: 120
-  },
-  button: {
-    paddingBottom: 10,
-    paddingTop: 10,
-    backgroundColor: 'rgba(135,135,135,0.7)'
-  },
-  image: {
-    // position: 'absolute',
-    width: '100%',
-    height: '100%',
-    justifyContent: 'center',
-    flex: 1
-    // resizeMode: 'cover',
-    // backgroundImage: '50';
-    // alignItems: 'center',
-  },
-  text: {
-    textAlign: 'center',
-    color: 'white',
-    fontWeight: '700'
-  }
-})
 
 export default ModalStack
