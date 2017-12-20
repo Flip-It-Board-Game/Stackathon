@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import { View, StyleSheet, Text, KeyboardAvoidingView } from 'react-native'
-import LoginForm from '../components/loginForm'
+import React, { Component } from 'react';
+import { View, StyleSheet, Text, KeyboardAvoidingView } from 'react-native';
+import LoginForm from '../components/loginForm';
 
 const styles = StyleSheet.create({
   container: {
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     opacity: 0.9
   }
-})
+});
 
 export default class Login extends Component {
   render() {
@@ -31,6 +31,6 @@ export default class Login extends Component {
           <LoginForm />
         </View>
       </KeyboardAvoidingView>
-    )
+    );
   }
 }

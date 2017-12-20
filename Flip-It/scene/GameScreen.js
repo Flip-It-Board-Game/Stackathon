@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
-import { connect, Provider } from 'react-redux'
-import { StyleSheet, View, Text, TabNavigator } from 'react-native'
-import Grid from '../components/grid'
-import store from '../components/store/store'
-import { Container, Content } from 'native-base'
-import Canvas from 'react-native-canvas'
+import React, { Component } from 'react';
+import { connect, Provider } from 'react-redux';
+import { StyleSheet, View, Text, TabNavigator } from 'react-native';
+import Grid from '../components/grid';
+import store from '../components/store/store';
+import { Container, Content } from 'native-base';
+import Canvas from 'react-native-canvas';
 
 const styles = StyleSheet.create({
   container: {
@@ -26,18 +26,18 @@ const styles = StyleSheet.create({
   },
   renderA: {},
   renderB: {}
-})
+});
 
 export default class GameScreen extends Component {
   constructor(props) {
-    super(props)
-    this.handleCanvas = this.handleCanvas.bind(this)
+    super(props);
+    this.handleCanvas = this.handleCanvas.bind(this);
   }
 
   handleCanvas(canvas) {
-    const ctx = canvas.getContext('2d')
-    ctx.fillStyle = 'purple'
-    ctx.fillRect(0, 0, 400, 400)
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = 'purple';
+    ctx.fillRect(0, 0, 400, 400);
   }
 
   render() {
@@ -59,6 +59,6 @@ export default class GameScreen extends Component {
           </Content>
         </Container>
       </Provider>
-    )
+    );
   }
 }
