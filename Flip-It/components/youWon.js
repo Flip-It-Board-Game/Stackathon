@@ -117,7 +117,7 @@ class youWon extends Component {
             width: tWidth,
             height: tHeight
           }}
-          source={require('../images/confettisnowgif.gif')}
+          source={require('../images/blackDot.png')}
         >
           <Text
             style={{

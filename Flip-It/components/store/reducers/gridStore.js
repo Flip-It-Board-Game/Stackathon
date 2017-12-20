@@ -1,60 +1,60 @@
 //Default State
-const width = 5;
-const height = 5;
-const totalSquares = width * height;
+const width = 5
+const height = 5
+const totalSquares = width * height
 
-let boolArray = [];
+let boolArray = []
 for (let i = 0; i < totalSquares; i++) {
-  boolArray.push(true);
+  boolArray.push(true)
 }
 
-let initialState = boolArray;
+let initialState = boolArray
 
 //Actions
-const NEW_ARRAY = 'NEW_ARRAY';
-const RESET = 'RESET';
-const SET_BOARD = 'SET_BOARD';
+const NEW_ARRAY = 'NEW_ARRAY'
+const RESET = 'RESET'
+const SET_BOARD = 'SET_BOARD'
 
 //Action Creators
 export function newArray(array) {
-  const action = { type: NEW_ARRAY, array };
-  return action;
+  const action = { type: NEW_ARRAY, array }
+  return action
 }
 
 export function setBoard(board) {
-  let newBoolArray = [];
-  let newTotalSquares = board.width * board.height;
+  let newBoolArray = []
+  let newTotalSquares = board.width * board.height
   for (let i = 0; i < newTotalSquares; i++) {
-    newBoolArray.push(true);
+    newBoolArray.push(true)
   }
-  let newBoard = newBoolArray;
-  const action = { type: SET_BOARD, newBoard };
-  return action;
+  let newBoard = newBoolArray
+  const action = { type: SET_BOARD, newBoard }
+  return action
 }
 
 export function reset() {
-  const action = { type: RESET };
-  return action;
+  const action = { type: RESET }
+  return action
 }
 
 //Reducer
 export default function reducer(state = initialState, action) {
-  let newState = Object.assign([], state);
+  let newState = Object.assign([], state)
 
   switch (action.type) {
     case NEW_ARRAY:
-      newState = action.array;
-      return newState;
+      newState = action.array
+      return newState
 
     case RESET:
-      newState = initialState;
-      return newState;
+      newState = initialState
+      return newState
 
     case SET_BOARD:
-      newState = action.newBoard;
-      return newState;
+      newState = action.newBoard
+      return newState
 
     default:
-      return newState;
+      return newState
   }
 }

@@ -20,6 +20,9 @@ class Grid extends Component {
 
   componentWillMount() {
     this.props.setCount({ count: 0 })
+  }
+
+  componentWillUnmount() {
     this.props.reset()
   }
 
