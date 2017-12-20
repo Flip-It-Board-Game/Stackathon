@@ -27,16 +27,14 @@ class Instructions extends Component {
     return (
          <Image
           source={require('../images/backgroundSnow.png')}
-        > 
+        >
         <View style={styles.container}>
               <Text style={styles.title}>
-                How to Play 
+                How to Play Flip Title
               </Text>
               <View >
               <Text style={styles.text}>
               {'\n'}
-              This is a version of Lights out the game.
-              {'\n'}{'\n'}
               Object of the game is to make it so that each tile of the game board is red.
               The tiles of the board can either be red or black.
               Each time you click on a tile it will flip the tile to the opposite color. In addition
@@ -48,7 +46,7 @@ class Instructions extends Component {
           </Text>
               </View>
               </View>
-        </Image> 
+        </Image>
     );
   }
 }

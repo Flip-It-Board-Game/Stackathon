@@ -61,7 +61,7 @@ class GameMenu extends Component {
             >
               <Text style={styles.text}>How to Play</Text>
             </Button>
-            <Button 
+            <Button
               transparent
               light
               onPress={() => this.props.navigation.navigate('GameStats')}

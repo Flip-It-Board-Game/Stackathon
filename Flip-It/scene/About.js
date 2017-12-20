@@ -27,7 +27,7 @@ class About extends Component {
     return (
          <Image
           source={require('../images/backgroundSnow.png')}
-        > 
+        >
         <View style={styles.container}>
               <Text style={styles.title}>
               About Us
@@ -39,7 +39,7 @@ class About extends Component {
           </Text>
               </View>
               </View>
-        </Image> 
+        </Image>
     );
   }
 }
