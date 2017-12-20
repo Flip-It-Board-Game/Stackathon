@@ -19,7 +19,7 @@ export default class CardShowcaseExample extends Component {
             </CardItem>
             <CardItem>
               <Body>
-                <Image source={require('../images/NoraTired.png')} style={{height: 200, width: 200, flex: 1}}/>
+                <Image source={require('../images/NoraTired.png')} style={{height: 200, width: 200, flex: 1}} />
                 <Text>
                   Hi my name is Nora. My favorite food is people food. Oh! I forgot to mention, but I want to play
                 </Text>

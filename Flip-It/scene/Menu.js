@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
-import { View, StyleSheet, Image, Text } from 'react-native'
-import { Button } from 'native-base'
+import React, { Component } from 'react';
+import { View, StyleSheet, Image, Text } from 'react-native';
+import { Button } from 'native-base';
 
-const Dimensions = require('Dimensions')
-let { height, width } = Dimensions.get('window')
-let tHeight = height
-let tWidth = width
+const Dimensions = require('Dimensions');
+let { height, width } = Dimensions.get('window');
+let tHeight = height;
+let tWidth = width;
 
 class GameMenu extends Component {
   render() {
@@ -32,7 +32,7 @@ class GameMenu extends Component {
         width: 170,
         textAlign: 'center'
       }
-    })
+    });
     return (
       <View>
         <Image
@@ -84,8 +84,8 @@ class GameMenu extends Component {
           </View>
         </Image>
       </View>
-    )
+    );
   }
 }
 
-export default GameMenu
+export default GameMenu;
