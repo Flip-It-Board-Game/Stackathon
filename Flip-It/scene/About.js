@@ -1,41 +1,47 @@
 import React, { Component } from 'react';
-import { Image } from 'react-native';
-import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body } from 'native-base';
-export default class CardShowcaseExample extends Component {
+import { Image, Text, View, StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingRight: 120
+  },
+  text: {
+    backgroundColor: '#6b92b9',
+    textAlign: 'center',
+    color: 'white',
+    justifyContent: 'center',
+    fontSize: 20,
+  },
+  title: {
+    paddingTop: 10,
+    backgroundColor: '#6b92b9',
+    textAlign: 'center',
+    color: 'black',
+    fontSize: 26,
+    justifyContent: 'center',
+  }
+});
+class About extends Component {
   render() {
     return (
-      <Container>
-        <Header />
-        <Content>
-          <Card style={{flex: 0}}>
-            <CardItem>
-              <Left>
-                <Thumbnail source={{uri: 'Image URL'}} />
-                <Body>
-                  <Text>Shameless Promotion</Text>
-                  <Text note>November 11, 2017</Text>
-                </Body>
-              </Left>
-            </CardItem>
-            <CardItem>
-              <Body>
-                <Image source={require('../images/NoraTired.png')} style={{height: 200, width: 200, flex: 1}} />
-                <Text>
-                  Hi my name is Nora. My favorite food is people food. Oh! I forgot to mention, but I want to play
-                </Text>
-              </Body>
-            </CardItem>
-            <CardItem>
-              <Left>
-                <Button transparent textStyle={{color: '#87838B'}}>
-                  <Icon name="logo-github" />
-                  <Text>1,926 stars</Text>
-                </Button>
-              </Left>
-            </CardItem>
-          </Card>
-        </Content>
-      </Container>
+         <Image
+          source={require('../images/backgroundSnow.png')}
+        > 
+        <View style={styles.container}>
+              <Text style={styles.title}>
+              About Us
+              </Text>
+              <View >
+              <Text style={styles.text}>
+              {'\n'}
+              This game was created by Andrew Ziegler and Mike Romani
+          </Text>
+              </View>
+              </View>
+        </Image> 
     );
   }
 }
+
+export default About;
