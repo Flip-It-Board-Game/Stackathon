@@ -11,12 +11,13 @@ import {
 } from 'react-native'
 import Expo from 'expo'
 import { StackNavigator } from 'react-navigation'
+import { Provider } from 'react-redux'
+import store from './components/store/store'
 import Login from './scene/Login'
 import Menu from './scene/Menu'
 import GameScreen from './scene/GameScreen'
 import LevelSelector from './scene/LevelSelector'
-import store from './components/store/store'
-import { Provider } from 'react-redux'
+import How2Play from './scene/How2Play'
 import GameSettings from './scene/GameSettings'
 import About from './scene/About'
 import GameStats from './scene/GameStats'
@@ -35,7 +36,8 @@ let styles = StyleSheet.create({
   button: {
     paddingBottom: 10,
     paddingTop: 10,
-    backgroundColor: 'rgba(135,135,135,0.7)'
+    backgroundColor: '#6b92b9'
+    // backgroundColor: 'rgba(135,135,135,0.7)'
   },
   background: {
     // position: 'absolute',
@@ -56,7 +58,7 @@ let styles = StyleSheet.create({
   text: {
     textAlign: 'center',
     color: 'white',
-    fontWeight: '700'
+    fontSize: 24
   },
   title:{
     backgroundColor: '#6b92b9',
@@ -64,7 +66,7 @@ let styles = StyleSheet.create({
     position: 'relative',
     bottom:'16%',
     color: 'white',
-    fontSize: 26
+    fontSize: 30
   }
 })
 class HomeScreen extends Component {
@@ -98,7 +100,7 @@ class HomeScreen extends Component {
              {/* <View style={styles.container}>
               <View style={styles.button}> */}
               <Text style={styles.title}>
-                Title Here 
+                Flip Tile
               </Text>
                 {/*<TouchableOpacity onPress={this.login}>
                   <Text style={styles.text}>Login</Text>
@@ -132,6 +134,9 @@ const ModalStack = StackNavigator({
   },
   LevelSelector: {
     screen: LevelSelector
+  },
+  How2Play: {
+    screen: How2Play
   },
   GameStats: {
     screen: GameStats
