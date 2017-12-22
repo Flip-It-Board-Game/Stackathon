@@ -1,6 +1,16 @@
 {
-  "name": "Flip-It",
-  "version": "0.1.0",
+  "name": "Flip-Tile",
+  "version": "1.0.0",
+  "description": "A puzzle game that involves flipping a tile to solve it",
+  "author": {
+    "name": "Andrew Ziegler",
+    "email": "14apdjz@gmail.com",
+    "url": "https://github.com/apdjz"
+  },
+  "contributors": [
+    {"name": "Mike Romani",
+    "url": "https://github.com/mr4227"}
+  ],
   "private": true,
   "devDependencies": {
     "react-native-scripts": "1.7.0",
