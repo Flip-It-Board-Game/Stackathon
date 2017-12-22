@@ -1,5 +1,20 @@
 {
   "expo": {
-    "sdkVersion": "22.0.0"
+    "name": "Flip Tile",
+    "description": "A puzzle game that involves flipping a tile to solve it",
+    "slug": "flip-title",
+    "privacy": "public",
+    "sdkVersion": "22.0.0",
+    "version": "1.0.0",
+    "orientatiton": "portrait",
+    "primaryColor": "#6b92b9",
+    "icon": "./assets/icon/icon.png",
+    "loading":{
+      "icon":"./assets/icon/loading-icon.png"
+    },
+    "ios":{
+      "supportsTablet": true,
+      "buildNumber": "1"
+    }
   }
 }
